@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body class="body">
+    <section class="scoreBoard" id="scoreBoard1">
+      <div class="panel">
+        <img src="images/logo.svg" alt="logo">
+        <div class="score">
+          <p>oooooo</p>
+          <h3>Hi</h3>
+        </div>
+      </div>
+    </section>
+    
+    <section id="stage" class="stage">
+        <button class="easy" onclick="easy()">EASY</button>
+        <button class="hard">HARD</button>
+    </section>
+
+    <main id="mainy">
+      <section class="scoreBoard">
+        <div class="panel">
+          <img src="images/logo.svg" alt="logo">
+          <div class="score">
+            <p>ooooo</p>
+            <h3>0</h3>
+          </div>
+        </div>
+      </section>
+    
+      <section class="game" id="game">
+        <span class="triangle">
+          <img src="images/bg-triangle.svg" alt="game-img">
+        </span>
+        <div class="PS">
+          <button id="pap" class="paper">
+            <img src="images/icon-paper.svg" alt="paper">
+          </button>
+          <button id = "sci" class="scissors">
+            <img src="images/icon-scissors.svg" alt="Scissors">
+          </button>
+          <button id="rck" class="rock">
+            <img src="images/icon-rock.svg" alt="rock">
+          </button>
+        </div>
+      </section>
+      
+      <!-- modal for picking paper and the house picking scissors -->
+      <section id="pModal" class="picked">  
+          <div class="win">
+            <button class="paper">
+                <img src="images/icon-paper.svg" alt="Paper">
+            </button>
+            <p class="rockP">YOU PICKED</p>
+          </div>
+          <div class="win">
+            <button class="scissors">
+              <img src="images/icon-scissors.svg" alt="Scissors">
+            </button>
+            <p class="scissorsP">THE HOUSE PICKED</p>
+          </div>
+             
+  
+          <button id="goBack" class = "back">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+  
+              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
+              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
+                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
+                156.087,322.083,142.58,313.752,134.248z"/>
+            </svg>
+          </button>
+      </section>
+        
+      <!-- modal for picking paper and the house picking rock -->
+      <section id = "pModal1" class="picked2">        
+        <div class="win">
+          <button class="paper">
+              <img src="images/icon-paper.svg" alt="Paper">
+          </button>
+          <p class="rockP">YOU PICKED</p>
+        </div>
+        <div class="win">
+          <button class="rock">
+            <img src="images/icon-rock.svg" alt="Rock">
+          </button>
+          <p class="scissorsP">THE HOUSE PICKED</p>
+        </div>
+    
+        <button id="goBack1" class = "back">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+  
+            <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+              c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
+            <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
+              c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
+              156.087,322.083,142.58,313.752,134.248z"/>
+          </svg>
+        </button>
+        </section>
+        </div>
+        
+        <!-- modal for picking scissors and the house picking rock -->
+        <section id="sModal" class="picked3">        
+          <div class="win">
+            <button class="scissors">
+              <img src="images/icon-scissors.svg" alt="Scissors">
+            </button>
+            <p class="rockP">YOU PICKED</p>
+          </div>
+          <div class="win">
+            <button class="rock">
+              <img src="images/icon-rock.svg" alt="rock">
+            </button>
+            <p class="scissorsP">THE HOUSE PICKED</p>
+          </div>
+    
+          <button id="goBack2" class = "back">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+    
+            <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+              c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
+            <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
+              c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
+              156.087,322.083,142.58,313.752,134.248z"/>
+            </svg>
+          </button>
+        </section>
+  
+        <!-- modal for picking scissors and the house picking paper -->
+        <section id="sModal1" class="picked4">        
+          <div class="win">
+            <button class="scissors">
+              <img src="images/icon-scissors.svg" alt="Scissors">
+            </button>
+          <p class="rockP">YOU PICKED</p>
+          </div>
+          <div class="win">
+            <button class="paper">
+              <img src="images/icon-paper.svg" alt="paper">
+            </button>
+            <p class="scissorsP">THE HOUSE PICKED</p>
+          </div>
+    
+          <button id="goBack2" class = "back">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+    
+              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
+              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
+                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
+                156.087,322.083,142.58,313.752,134.248z"/>
+              </svg>
+          </button>
+        </section>
+  
+        <!-- modal for picking rock and the house picking scissors -->
+        <section id="rModal" class="picked6">        
+          <div class="win">
+            <button class="rock">
+              <img src="images/icon-rock.svg" alt="Rock">
+            </button>
+            <p class="rockP">YOU PICKED</p>
+          </div>
+          <div class="win">
+            <button class="scissors">
+              <img src="images/icon-scissors.svg" alt="Scissors">
+            </button>
+            <p class="scissorsP">THE HOUSE PICKED</p>
+          </div>
+    
+          <button id="goBack3" class = "back">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+    
+              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
+              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
+                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
+                156.087,322.083,142.58,313.752,134.248z"/>
+            </svg>
+          </button>
+        </section>
+  
+        <!-- modal for picking rock and the house picking paper -->
+        <section id="rModal1" class="picked6">        
+          <div class="win">
+            <button class="rock">
+              <img src="images/icon-rock.svg" alt="rock">
+            </button>
+              <p class="rockP">YOU PICKED</p>
+          </div>
+          <div class="win">
+            <button class="paper">
+              <img src="images/icon-paper.svg" alt="paper">
+            </button>
+            <p class="scissorsP">THE HOUSE PICKED</p>
+          </div>
+    
+          <button id="goBack3" class = "back">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+    
+              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
+              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
+                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
+                156.087,322.083,142.58,313.752,134.248z"/>
+            </svg>
+          </button>
+        </section>
+  
+      <!-- <section class="back">
+        <button id="goBack"  class = "goBack" onclick="goback()">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+  
+            <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
+              c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
+            <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
+              c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
+              156.087,322.083,142.58,313.752,134.248z"/>
+          </svg>
+        </button>
+      </section> -->
+      
+      <!-- modal for the rules -->
+      <section id="modal" class="myModal">
+        <div class="content">
+            <h2>RULES</h2>        
+            <img src="images/image-rules.svg" class="rules">
+  
+            <button class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                    <path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 
+                    7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/>
+                </svg>
+            </button>
+        </div>
+      </section>
+      
+      
+      <section>
+        <button type="button" id="btn">RULES</button>
+      </section>
+    </main>
+
+    <!-- modal for the rules homepage -->
+    <section id="modal1" class="myModal1">
+      <div class="content">
+          <h2>RULES</h2>        
+          <img src="images/image-rules.svg" class="rules">
+
+          <button class="close1" onclick="myMod()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 
+                  7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/>
+              </svg>
+          </button>
+      </div>
+    </section>
+  
+    <section>
+      <button type="button" id="btn1" onclick="go()">RULES</button>
+    </section>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#" target="_blank">Osaze Osaigbevo</a>.
+    </footer>
+
+    <script src="main.js"></script>
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  </body>
+</html>

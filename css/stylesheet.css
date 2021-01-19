@@ -1,0 +1,412 @@
+/* general styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+/* styles for font */
+@font-face {
+    font-family: Barlow Semi Condensed;
+    src: url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
+}
+#mainy {
+    display: none;
+}
+/* styles for the body */
+.body {
+    background-image: linear-gradient(hsl(214, 47%, 23%), hsl(238, 48%, 15%));
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    font-family: Barlow Semi Condensed;  
+    letter-spacing: 0.3em; 
+    height: 100vh;  
+    overflow: hidden;
+}
+/* styles for the score board */
+.scoreBoard {
+    border: 3px solid hsl(217, 16%, 45%);
+    margin: 1.9em 1.9em 3em 1.9em;
+    padding: 0.9em 0.9em 0.6em 0.9em;
+    border-radius: 0.4em;
+    position: relative;
+}
+.scoreBoard img {
+    width: 30%;
+}
+.score {
+    float: right;
+    border: 1px solid rgb(214, 211, 211);
+    padding: 0 0.9em;
+    padding-bottom: 0.5em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.3em;
+    width: 15%;
+    margin-top: -.5em;
+}
+.score p {
+    font-size: 0.5em;
+    margin-top: 0.6em;
+    padding-bottom: 0.6em;
+    color: hsl(229, 64%, 46%);
+}
+.score h3 {
+    font-size: 1.68em;
+    line-height: 1.5rem;
+    margin-top: 0.3em;
+    color: hsl(217, 16%, 45%);
+    text-align: center;
+}
+/* styles for the game with triangle and rock, paper, scissors */
+section.game {
+    margin: 3em 0;
+    position: fixed;
+}
+.triangle img{
+    width: 60%;
+    height: 30%;
+    position: fixed;
+    margin-left: 4.6em;
+}
+.paper img, .scissors img, .rock img {
+    width: 80%;
+}
+.paper img, .scissors img {
+    margin-top: -7px;
+}
+.PS {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: -50px;
+}
+/* styles for rock, paper scissors on index page */
+.paper {
+    border-radius: 50%;
+    background-color:hsl(264, 14%, 93%);
+    padding: 24px;
+    width: 29%;
+    margin-top: -40px;
+    margin-left: 60px;
+    float: left;
+    border:  12px solid hsl(230, 89%, 65%);
+}
+.scissors {
+    border-radius: 50%;
+    background-color:hsl(264, 14%, 93%);
+    padding: 24px;
+    width: 29%;
+    margin-top: -147px;
+    float: left;
+    border:  12px solid hsl(40, 84%, 53%);
+    margin-left: 200px;
+}
+.rock {
+    border-radius: 50%;
+    background-color:hsl(264, 14%, 93%);
+    padding: 24px;
+    width: 29%;
+    margin-top: -40px;
+    position: relative;
+    margin-right: 124px;
+    float: right;
+    border: 12px solid hsl(349, 70%, 56%);
+}
+.rock:hover, .paper:hover, .scissors:hover {
+    background-color: hsl(0, 1%, 73%);
+    transition: ease-in .2s;
+}
+/* styles for the rules, easy, hard buttons */
+button {
+    background-color: hsl(238, 48%, 15%);
+    color: hsl(0, 0%, 100%);
+    border: 2px solid hsl(217, 16%, 45%);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 7px 30px;
+    position: relative;
+    font-size: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 340px 0 40px 140px;
+}
+button:hover {
+    color: red;
+    transition: ease-in-out 0.5s;
+}
+.stage {
+    margin-bottom: -150px;
+}
+.easy {
+    top: 80px;
+    margin-top: -100px;
+}
+.hard {
+    top: 80px;
+    margin-top: -100px;
+}
+/* style for the rules page */
+.rules {
+    margin-left: 30px;
+    width: 80%;
+}
+h2 {
+    text-align: center;
+    margin: 80px;
+    color: hsl(229, 25%, 31%);
+}
+/* styles for picked characters (modal) */
+.picked{
+    display: none;
+}
+.picked1, .picked2, .picked3, .picked4, .picked6 {
+    display: none; /*hidden by default*/
+    position: fixed;
+    z-index: 1; /*makes it stay on top*/
+    width: 100%;
+    overflow: auto;
+    transition: 2s ease-in-out;
+}
+.picked .win .scissors {
+    top: 170px;
+}
+.picked6 .win .scissors {
+    position: fixed;
+    margin-top: 10px;
+}
+.picked4 .win .scissors {
+    margin-left: 50px;
+    margin-top: 10px;
+    position: fixed;
+}
+.picked2 .win .rock, .picked3 .win .rock, 
+.picked4 .win .paper, .picked6 .win .paper {
+    margin-left: 210px;
+}
+.picked3 .win .scissors {
+    margin-left: 50px;
+    margin-top: 10px;
+    position: fixed;
+}
+/* styles for win1,2,3 page */
+.win .rock {
+    margin-top: 300px;
+    position: fixed;
+    margin-left: 50px;
+}
+.win .paper {
+    top: 230px;
+    position: fixed;
+    margin-left: 50px;
+}
+.win .scissors  {
+    top: 183px;
+    margin-left: 210px;
+}
+.win p {
+    position: fixed;
+    top: 320px;
+    font-size: 11px;
+    color: hsl(0, 0%, 100%);
+    left: 65px;
+}
+.win .scissorsP {
+    margin-left: 140px;
+}
+
+.winning1 .rock, .winning3 .win .paper {
+    margin-left: 210px;
+}
+.winning3 .win .scissors {
+    margin-left: 50px;
+}
+/* styles for back button */
+.back {
+    border: none;
+    background-color: transparent;
+    width: 5em;
+    left: 2em;
+    padding: 0px;
+    margin-top: 25em;
+}
+
+/* modal for rules*/
+.myModal {
+    display: none; /*hidden by default*/
+    position: fixed;
+    z-index: 1; /*makes it stay on top*/
+    left: 40px;
+    top: 11px;
+    width: 80%;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    transition: 2s ease-in-out;
+    border-radius: 7px;
+}
+.myModal1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 2.5em;
+    top: 1em;
+    transition: 2s ease-in-out;
+    width: 80%;
+    height: 95%;
+    background-color: #fff;
+    border-radius: 0.9em;
+}
+/* styles for close button */
+.close, .close1 {
+    background-color: hsl(0, 0%, 100%);
+    margin-left: 40%;
+    margin-top: 75px;
+    border: none;
+}
+
+/* styles for the lose1 page */
+.losed {
+    content: "";
+    clear: both;
+    position: relative;
+    top: 170px;
+    margin-bottom: 0px;
+}
+.lose p, .lose2 p {
+    position: fixed;
+    top: 320px;
+    font-size: 11px;
+    color: hsl(0, 0%, 100%);
+}
+.lose .paper {
+    margin-left: 50px;
+    top: -108px;
+    float: left;
+}
+.lose .rock, .win .rock {
+    margin-left: 50px;
+    top: -113px;
+    float: left;
+}
+.lose .scissors {
+    margin-left: 50px;
+    float: left;
+    top: 15px;
+}
+.loseP {
+    color: hsl(0, 0%, 100%);
+    margin-left: 65px;
+}
+.scissorsP {
+    color: hsl(0, 0%, 100%);
+    margin-left: 215px;
+}
+/* styles for rock and scissors and paper on lose2 & lose3.html page */
+.lose2 .rock {
+    top: 60px;
+    left: 170px;
+}
+.lose2 .scissors {
+    top: 180px;
+}
+.lose3 .rock {
+    top: 60px;
+    left: 170px
+}
+.lose3 .paper {
+    top: -54px;
+    left: 0px
+}
+/* styles for play again button on win1,2,3 & lose1,2,3 pages */
+.playAgain h1, .playAgain1 h1, .playAgain2 h1, 
+.playAgain3 h1, .playAgain4 h1 {
+    margin: 230px 0 20px 120px;
+    color: hsl(0, 0%, 100%);
+    font-size: 34px;
+    position: fixed;
+    letter-spacing: 0px;
+}
+.playAgain h1 {
+    margin: 230px 0 20px 120px;
+}
+.playAgain2 h1 {
+    margin: 230px 0 20px 112px;
+}
+.playAgain3 h1 {
+    margin-left: 120px;
+}
+.playAgain button, .playAgain1 button, .playAgain2 button {
+    color: hsl(229, 25%, 31%);
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px 50px;
+    border: none;
+    top: 195px;
+    position: fixed;
+}
+.playAgain3 button {
+    color: hsl(229, 25%, 31%);
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px 50px;
+    border: none;
+    top: 195px;
+    left: 8px;
+    position: fixed;
+}
+.playAgain4 button {
+    color: hsl(229, 25%, 31%);
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px 50px;
+    border: none;
+    top: 105px;
+    left: -40px;
+    position: fixed;
+}
+.playAgain button {
+    margin: 250px 0 0 -45px ;
+}
+.playAgain1 button, .playAgain2 button, .playAgain3 button {
+    margin: 250px 0 0 110px;
+}
+/* style for play again and rules button */
+
+/*  */
+.loseButton {
+    margin-left: 140px;
+    color: hsl(0, 0%, 100%);
+    padding: 7px 30px;
+    position: fixed;
+    margin-top: 200px;
+}
+.piccked {
+    margin: 120px 0 50px 140px;
+    color: hsl(0, 0%, 100%);
+    padding: 7px 30px;
+}
+/* styles for the dark circles */
+.circle {
+    border-radius: 50%;
+    width: 25%;
+    height: 6rem;
+    background-color: hsl(214, 40%, 22%);
+    float: right;
+    margin-right: 60px;
+    margin-top: 30px;
+    position: static;
+}
+.circle3 {
+    border-radius: 50%;
+    width: 25%;
+    height: 6rem;
+    background-color: hsl(214, 40%, 22%);
+    display: inline-block;
+    margin-left: 230px;
+    position: fixed;
+    top: 200px;
+}
+
+/* styles for footer on index page */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    letter-spacing: 0px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
