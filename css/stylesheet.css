@@ -12,12 +12,12 @@
     display: none;
 }
 /* styles for the body */
-.body {
+body {
     background-image: linear-gradient(hsl(214, 47%, 23%), hsl(238, 48%, 15%));
     background-repeat: no-repeat;
     background-size: contain, cover;
     font-family: Barlow Semi Condensed;  
-    letter-spacing: 0.3em; 
+    letter-spacing: 0.2em; 
     height: 100vh;  
     overflow: hidden;
 }
@@ -65,27 +65,22 @@ section.game {
     height: 30%;
     position: fixed;
     margin-left: 4.6em;
+    top: 15em;
+    left: 0.3em;
 }
 .paper img, .scissors img, .rock img {
-    width: 80%;
+    width: 3.5em;
 }
 .paper img, .scissors img {
     margin-top: -7px;
 }
-.PS {
-    content: "";
-    display: table;
-    clear: both;
-    margin-bottom: -50px;
-}
-/* styles for rock, paper scissors on index page */
+/* styles for rock, paper, scissors */
 .paper {
     border-radius: 50%;
     background-color:hsl(264, 14%, 93%);
     padding: 24px;
-    width: 29%;
-    margin-top: -40px;
-    margin-left: 60px;
+    top: 21em;
+    left: 7em;
     float: left;
     border:  12px solid hsl(230, 89%, 65%);
 }
@@ -93,20 +88,16 @@ section.game {
     border-radius: 50%;
     background-color:hsl(264, 14%, 93%);
     padding: 24px;
-    width: 29%;
-    margin-top: -147px;
-    float: left;
+    top: -2em;
+    left: 22em;
     border:  12px solid hsl(40, 84%, 53%);
-    margin-left: 200px;
+    position: absolute;
 }
 .rock {
     border-radius: 50%;
     background-color:hsl(264, 14%, 93%);
     padding: 24px;
-    width: 29%;
-    margin-top: -40px;
-    position: relative;
-    margin-right: 124px;
+    top: 32em;
     float: right;
     border: 12px solid hsl(349, 70%, 56%);
 }
@@ -118,30 +109,30 @@ section.game {
 button {
     background-color: hsl(238, 48%, 15%);
     color: hsl(0, 0%, 100%);
+    border-radius: 0.5em;
     border: 2px solid hsl(217, 16%, 45%);
     cursor: pointer;
-    border-radius: 5px;
-    padding: 7px 30px;
-    position: relative;
-    font-size: 10px;
+    padding: 0.6em 2em;
+    position: fixed;
+    font-size: 0.6rem;
     text-decoration: none;
-    letter-spacing: 2px;
-    margin: 340px 0 40px 140px;
+    letter-spacing: 0.5em;
+    left: 15em;
+    top: 52em;
 }
 button:hover {
-    color: red;
-    transition: ease-in-out 0.5s;
+    color: hsl(214, 47%, 23%);
+    transition: ease-in-out;
+    background-color: hsl(204, 8%, 88%);
 }
 .stage {
-    margin-bottom: -150px;
+    position: fixed;
 }
 .easy {
-    top: 80px;
-    margin-top: -100px;
+    top: 20em;
 }
 .hard {
-    top: 80px;
-    margin-top: -100px;
+    top: 30em;
 }
 /* style for the rules page */
 .rules {
@@ -157,75 +148,83 @@ h2 {
 .picked{
     display: none;
 }
-.picked1, .picked2, .picked3, .picked4, .picked6 {
+.picked1, .picked2, .picked3, .picked4, .picked5, .picked6 {
     display: none; /*hidden by default*/
-    position: fixed;
+    /* position: fixed;
     z-index: 1; /*makes it stay on top*/
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     transition: 2s ease-in-out;
 }
-.picked .win .scissors {
-    top: 170px;
-}
-.picked6 .win .scissors {
-    position: fixed;
-    margin-top: 10px;
-}
-.picked4 .win .scissors {
-    margin-left: 50px;
-    margin-top: 10px;
-    position: fixed;
-}
-.picked2 .win .rock, .picked3 .win .rock, 
-.picked4 .win .paper, .picked6 .win .paper {
-    margin-left: 210px;
-}
-.picked3 .win .scissors {
-    margin-left: 50px;
-    margin-top: 10px;
-    position: fixed;
-}
-/* styles for win1,2,3 page */
-.win .rock {
-    margin-top: 300px;
-    position: fixed;
-    margin-left: 50px;
-}
-.win .paper {
-    top: 230px;
-    position: fixed;
-    margin-left: 50px;
-}
-.win .scissors  {
-    top: 183px;
-    margin-left: 210px;
-}
-.win p {
-    position: fixed;
-    top: 320px;
-    font-size: 11px;
-    color: hsl(0, 0%, 100%);
-    left: 65px;
-}
-.win .scissorsP {
-    margin-left: 140px;
-}
 
-.winning1 .rock, .winning3 .win .paper {
-    margin-left: 210px;
+/* styles for win1,2,3 & lose1,2,3 & picked modals*/
+.win1, .win2, .win3, .lose1, .lose2, .lose3 {
+    display: none;
 }
-.winning3 .win .scissors {
-    margin-left: 50px;
+.win2 .win .scissors, .lose1 .lose .scissors, .picked .win .scissors, .picked5 .win .scissors {
+    top: 20em;
+    right: 11%;
+    position: fixed;
+    margin: 0 auto;
+}
+.picked .win .scissors {
+    right: 12%;
+}
+.picked2 .win .rock, .picked3 .win .rock, .win1 .win .rock {
+    top: 20em;
+    right: -4%;
+    position: fixed;
+    margin: 0 auto;
+}
+.picked3 .win .scissors, .picked5 .win .rock, .picked6 .win .rock, .lose2 .lose .rock {
+    top: 20em;
+    left: 6em;
+    position: fixed;
+}
+.picked4 .win .paper, .picked6 .win .paper,
+.lose3 .lose .paper {
+    top: 20em;
+    position: fixed;
+    margin: 0 auto;
+    right: -27%;
+}
+.win1 .paper, .win2 .win .rock, .picked4 .win .paper,
+.picked2 .win .paper, .picked .win .paper, 
+.picked4 .win .scissors, .lose1 .lose .paper, .win3 .win .scissors,
+.lose3 .lose .rock {
+    top: 20em;
+    position: fixed;
+    left: 6em;
+    margin:  auto;
+}
+.win3 .win .paper {
+    top: 20em;
+    right: -24.5%;
+    position: fixed;
+    margin:  auto;
+}
+.win p, .lose p {
+    position: absolute;
+    top: 30em;
+    font-size: 0.68rem;
+    color: hsl(0, 0%, 100%);
+    left: 5em;
+}
+.win .scissorsP, .lose .scissorsP {
+    margin-left:40%;
+}
+ {
+
 }
 /* styles for back button */
 .back {
-    border: none;
-    background-color: transparent;
-    width: 5em;
-    left: 2em;
-    padding: 0px;
-    margin-top: 25em;
+    width: 2em;
+    margin-top: 24em;
+    margin-left: 3em;
+    margin-bottom: -23.2em;
+}
+svg:hover {
+    cursor: pointer;
 }
 
 /* modal for rules*/
@@ -255,125 +254,46 @@ h2 {
 }
 /* styles for close button */
 .close, .close1 {
-    background-color: hsl(0, 0%, 100%);
-    margin-left: 40%;
-    margin-top: 75px;
+    background-color: transparent;
+    left: 45%;
+    top: ;
     border: none;
 }
 
-/* styles for the lose1 page */
-.losed {
-    content: "";
-    clear: both;
-    position: relative;
-    top: 170px;
-    margin-bottom: 0px;
-}
-.lose p, .lose2 p {
-    position: fixed;
-    top: 320px;
-    font-size: 11px;
-    color: hsl(0, 0%, 100%);
-}
-.lose .paper {
-    margin-left: 50px;
-    top: -108px;
-    float: left;
-}
-.lose .rock, .win .rock {
-    margin-left: 50px;
-    top: -113px;
-    float: left;
-}
-.lose .scissors {
-    margin-left: 50px;
-    float: left;
-    top: 15px;
-}
-.loseP {
-    color: hsl(0, 0%, 100%);
-    margin-left: 65px;
-}
-.scissorsP {
-    color: hsl(0, 0%, 100%);
-    margin-left: 215px;
-}
-/* styles for rock and scissors and paper on lose2 & lose3.html page */
-.lose2 .rock {
-    top: 60px;
-    left: 170px;
-}
-.lose2 .scissors {
-    top: 180px;
-}
-.lose3 .rock {
-    top: 60px;
-    left: 170px
-}
-.lose3 .paper {
-    top: -54px;
-    left: 0px
-}
-/* styles for play again button on win1,2,3 & lose1,2,3 pages */
-.playAgain h1, .playAgain1 h1, .playAgain2 h1, 
-.playAgain3 h1, .playAgain4 h1 {
-    margin: 230px 0 20px 120px;
+/* styles for play again buttons on win1,2,3 & lose1,2,3 pages */
+.playAgain1 h1, .playAgain2 h1 {
+    top: 11.3em;
+    left: 30%;
     color: hsl(0, 0%, 100%);
     font-size: 34px;
     position: fixed;
     letter-spacing: 0px;
 }
-.playAgain h1 {
-    margin: 230px 0 20px 120px;
-}
-.playAgain2 h1 {
-    margin: 230px 0 20px 112px;
-}
-.playAgain3 h1 {
-    margin-left: 120px;
-}
-.playAgain button, .playAgain1 button, .playAgain2 button {
-    color: hsl(229, 25%, 31%);
-    background-color: hsl(0, 0%, 100%);
-    padding: 10px 50px;
-    border: none;
-    top: 195px;
-    position: fixed;
-}
-.playAgain3 button {
-    color: hsl(229, 25%, 31%);
-    background-color: hsl(0, 0%, 100%);
-    padding: 10px 50px;
-    border: none;
-    top: 195px;
-    left: 8px;
-    position: fixed;
-}
-.playAgain4 button {
-    color: hsl(229, 25%, 31%);
-    background-color: hsl(0, 0%, 100%);
-    padding: 10px 50px;
-    border: none;
-    top: 105px;
-    left: -40px;
-    position: fixed;
-}
-.playAgain button {
-    margin: 250px 0 0 -45px ;
-}
-.playAgain1 button, .playAgain2 button, .playAgain3 button {
-    margin: 250px 0 0 110px;
-}
-/* style for play again and rules button */
-
-/*  */
-.loseButton {
-    margin-left: 140px;
+.playAgain1 h1, .playAgain3 h1, .playAgainLose1 h1 {
+    top: 11.3em;
+    left: 28%;
     color: hsl(0, 0%, 100%);
-    padding: 7px 30px;
+    font-size: 34px;
     position: fixed;
-    margin-top: 200px;
+    letter-spacing: 0px;
 }
+.playAgain1 button, .playAgain2 button, .playAgain3 button, 
+.playAgainLose1 button  {
+    color: hsl(229, 25%, 31%);
+    background-color: hsl(0, 0%, 100%);
+    padding: 1em 3.1em;
+    border: none;
+    top: 45em;
+    left: 11.5em;
+    position: fixed;
+}
+.playAgain1 button:hover, .playAgain2 button:hover, .playAgain3 button:hover, 
+.playAgainLose1 button:hover, .playAgainLose2 button:hover, .playAgainLoseLose3 button:hover{
+    color:hsl(0, 0%, 100%);
+    background-color: hsl(238, 48%, 15%);
+    transition: ease-in-out 0.3s;
+}
+
 .piccked {
     margin: 120px 0 50px 140px;
     color: hsl(0, 0%, 100%);
@@ -402,6 +322,10 @@ h2 {
 }
 
 /* styles for footer on index page */
+footer {
+    top: 37em;
+    position: relative;
+}
 .attribution { 
     font-size: 11px; 
     text-align: center;

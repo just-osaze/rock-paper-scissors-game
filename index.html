@@ -9,8 +9,8 @@
 
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
   </head>
-  <body class="body">
-    <section class="scoreBoard" id="scoreBoard1">
+  <body>
+    <section id="scoreBoard1" class="scoreBoard" >
       <div class="panel">
         <img src="images/logo.svg" alt="logo">
         <div class="score">
@@ -26,7 +26,7 @@
     </section>
 
     <main id="mainy">
-      <section class="scoreBoard">
+      <section id = "scoreBoard2" class="scoreBoard">
         <div class="panel">
           <img src="images/logo.svg" alt="logo">
           <div class="score">
@@ -36,7 +36,7 @@
         </div>
       </section>
     
-      <section class="game" id="game">
+      <section id="game" class="game">
         <span class="triangle">
           <img src="images/bg-triangle.svg" alt="game-img">
         </span>
@@ -67,19 +67,6 @@
             </button>
             <p class="scissorsP">THE HOUSE PICKED</p>
           </div>
-             
-  
-          <button id="goBack" class = "back">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-  
-              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
-                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
-              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
-                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
-                156.087,322.083,142.58,313.752,134.248z"/>
-            </svg>
-          </button>
       </section>
         
       <!-- modal for picking paper and the house picking rock -->
@@ -96,23 +83,10 @@
           </button>
           <p class="scissorsP">THE HOUSE PICKED</p>
         </div>
-    
-        <button id="goBack1" class = "back">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+      </section>
   
-            <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
-              c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
-            <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
-              c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
-              156.087,322.083,142.58,313.752,134.248z"/>
-          </svg>
-        </button>
-        </section>
-        </div>
-        
-        <!-- modal for picking scissors and the house picking rock -->
-        <section id="sModal" class="picked3">        
+      <!-- modal for picking scissors and the house picking rock -->
+      <section id="sModal" class="picked3">        
           <div class="win">
             <button class="scissors">
               <img src="images/icon-scissors.svg" alt="Scissors">
@@ -125,18 +99,6 @@
             </button>
             <p class="scissorsP">THE HOUSE PICKED</p>
           </div>
-    
-          <button id="goBack2" class = "back">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-    
-            <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
-              c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
-            <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
-              c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
-              156.087,322.083,142.58,313.752,134.248z"/>
-            </svg>
-          </button>
         </section>
   
         <!-- modal for picking scissors and the house picking paper -->
@@ -153,22 +115,10 @@
             </button>
             <p class="scissorsP">THE HOUSE PICKED</p>
           </div>
-    
-          <button id="goBack2" class = "back">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-    
-              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
-                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
-              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
-                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
-                156.087,322.083,142.58,313.752,134.248z"/>
-              </svg>
-          </button>
         </section>
   
         <!-- modal for picking rock and the house picking scissors -->
-        <section id="rModal" class="picked6">        
+        <section id="rModal" class="picked5">        
           <div class="win">
             <button class="rock">
               <img src="images/icon-rock.svg" alt="Rock">
@@ -181,18 +131,6 @@
             </button>
             <p class="scissorsP">THE HOUSE PICKED</p>
           </div>
-    
-          <button id="goBack3" class = "back">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-    
-              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
-                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
-              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
-                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
-                156.087,322.083,142.58,313.752,134.248z"/>
-            </svg>
-          </button>
         </section>
   
         <!-- modal for picking rock and the house picking paper -->
@@ -209,24 +147,204 @@
             </button>
             <p class="scissorsP">THE HOUSE PICKED</p>
           </div>
-    
-          <button id="goBack3" class = "back">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-    
-              <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
-                c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
-              <path d="M313.752,134.248c-8.331-8.331-21.839-8.331-30.17,0L176.915,240.915c-8.331,8.331-8.331,21.839,0,30.17l106.667,106.667
-                c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
-                156.087,322.083,142.58,313.752,134.248z"/>
-            </svg>
-          </button>
         </section>
-  
+
+        <section id="win1" class="win1">
+          <div id ="scoreBoard" class="scoreBoard">
+            <div class="panel">
+              <img src="images/logo.svg" alt="logo">
+              <div class="score">
+                <p>SCORE</p>
+                <h3>13</h3>
+              </div>
+            </div>
+          </div>  
+      
+          <div class="winning1">
+            <div class="win">
+                <button class="paper">
+                    <img src="images/icon-paper.svg" alt="Paper">
+                </button>
+                <p class="rockP">YOU PICKED</p>
+            </div>        
+            <div class="win">
+                <button class="rock">
+                    <img src="images/icon-rock.svg" alt="Rock">
+                </button>
+                <p class="scissorsP">THE HOUSE PICKED</p>
+            </div>
+          </div>
+          
+          <div id= "playAgainWin1" class="playAgain1">
+            <h1>YOU WIN</h1>
+            <button>PLAY AGAIN</button>
+          </div>
+        </section>
+
+        <section id="win2" class="win2">
+          <div id ="scoreBoard" class="scoreBoard">
+            <div class="panel">
+              <img src="images/logo.svg" alt="logo">
+              <div class="score">
+                <p>SCORE</p>
+                <h3>11</h3>
+              </div>
+            </div>
+          </div>  
+      
+          <div class="winning2">
+            <div class="win">
+              <button class="rock">
+                <img src="images/icon-rock.svg" alt="rock">
+              </button>
+              <p class="rockP">YOU PICKED</p>
+            </div>        
+            <div class="win">
+              <button class="scissors">
+                <img src="images/icon-scissors.svg" alt="Scissors">
+              </button>
+              <p class="scissorsP">THE HOUSE PICKED</p>
+            </div>
+          </div>
+          
+          <div id="playAgainWin2" class="playAgain2">
+            <h1>YOU WIN</h1>
+            <button>PLAY AGAIN</button>
+          </div>
+        </section>
+
+        <section id="win3" class="win3">
+          <div id ="scoreBoard" class="scoreBoard">
+            <div class="panel">
+              <img src="images/logo.svg" alt="logo">
+              <div class="score">
+                <p>SCORE</p>
+                <h3>11</h3>
+              </div>
+            </div>
+          </div>  
+      
+          <div class="winning3">
+            <div class="win">
+              <button class="scissors">
+                  <img src="images/icon-scissors.svg" alt="Scissors">
+              </button>
+                <p class="rockP">YOU PICKED</p>
+            </div>        
+            <div class="win">
+              <button class="paper">
+                  <img src="images/icon-paper.svg" alt="Paper">
+              </button>
+                <p class="scissorsP">THE HOUSE PICKED</p>
+            </div>
+          </div>
+          
+          <div id="playAgainWin3" class="playAgain3">
+              <h1>YOU WIN</h1>
+              <button>PLAY AGAIN</button>
+          </div>
+        </section>
+
+        <section id="lose1" class="lose1">
+          <div id ="scoreBoard4" class="scoreBoard">
+            <div class="panel">
+              <img src="images/logo.svg" alt="logo">
+              <div class="score">
+                <p>SCORE</p>
+                <h3>11</h3>
+              </div>
+            </div>
+          </div>  
+      
+          <div class="losed">
+            <div class="lose">
+              <button class="paper">
+                  <img src="images/icon-paper.svg" alt="paper">
+              </button>
+              <p class="loseP">YOU PICKED</p>
+              </div>        
+              <div class="lose">
+                <button class="scissors">
+                  <img src="images/icon-scissors.svg" alt="Scissors">
+                </button>
+                <p class="scissorsP">THE HOUSE PICKED</p>
+              </div>
+          </div>
+          
+          <div id="playAgainLose1" class="playAgainLose1">
+            <h1>YOU LOSE</h1>
+            <button>PLAY AGAIN</button>
+          </div>
+        </section>
+
+        <section id= "lose2" class="lose2">
+          <div id ="scoreBoard" class="scoreBoard">
+            <div class="panel">
+              <img src="images/logo.svg" alt="logo">
+              <div class="score">
+                <p>SCORE</p>
+                <h3>11</h3>
+              </div>
+            </div>
+          </div>  
+      
+          <div class="lose2">
+            <div class="lose">
+              <button class="scissors">
+                <img src="images/icon-scissors.svg" alt="scissors">
+              </button>
+              <p class="loseP">YOU PICKED</p>
+            </div>        
+            <div class="lose">
+              <button class="rock">
+                <img src="images/icon-rock.svg" alt="Rock">
+              </button>
+              <p class="scissorsP">THE HOUSE PICKED</p>
+            </div>
+          </div>
+          
+          <div id="playAgainLose2" class="playAgain2">
+            <h1>YOU LOSE</h1>
+            <button>PLAY AGAIN</button>
+          </div>
+        </section>
+        
+        <section id="lose3" class="lose3">
+          <div id ="scoreBoard" class="scoreBoard">
+            <div class="panel">
+              <img src="images/logo.svg" alt="logo">
+              <div class="score">
+                <p>SCORE</p>
+                <h3>11</h3>
+              </div>
+            </div>
+          </div>  
+      
+          <div class="lose3">
+            <div class="lose">
+              <button class="rock">
+                <img src="images/icon-rock.svg" alt="Rock">
+              </button>
+              <p class="loseP">YOU PICKED</p>
+            </div>        
+            <div class="lose">
+              <button class="paper">
+                <img src="images/icon-paper.svg" alt="Paper">
+              </button>
+              <p class="scissorsP">THE HOUSE PICKED</p>
+            </div>
+          </div>
+          
+          <div id="playAgainLose3" class="playAgain3">
+            <h1>YOU LOSE</h1>
+            <button>PLAY AGAIN</button>
+          </div>
+        </section>
+
       <!-- <section class="back">
-        <button id="goBack"  class = "goBack" onclick="goback()">
+        <span id="goBack"  class = "goBack">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            fill ="#fff" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
   
             <path d="M256,0C114.618,0,0,114.618,0,256s114.618,256,256,256s256-114.618,256-256S397.382,0,256,0z M256,469.333
               c-117.818,0-213.333-95.515-213.333-213.333S138.182,42.667,256,42.667S469.333,138.182,469.333,256S373.818,469.333,256,469.333z"/>
@@ -234,7 +352,7 @@
               c8.331,8.331,21.839,8.331,30.17,0c8.331-8.331,8.331-21.839,0-30.17L222.17,256l91.582-91.582C322.083,
               156.087,322.083,142.58,313.752,134.248z"/>
           </svg>
-        </button>
+        </span>
       </section> -->
       
       <!-- modal for the rules -->
@@ -258,7 +376,7 @@
       </section>
     </main>
 
-    <!-- modal for the rules homepage -->
+    <!-- modal for the rules, homepage -->
     <section id="modal1" class="myModal1">
       <div class="content">
           <h2>RULES</h2>        
@@ -274,7 +392,7 @@
     </section>
   
     <section>
-      <button type="button" id="btn1" onclick="go()">RULES</button>
+      <button type="button" id="btn1" onclick="openn()">RULES</button>
     </section>
 
     <footer class="attribution">
@@ -283,7 +401,5 @@
     </footer>
 
     <script src="main.js"></script>
-    <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   </body>
 </html>
